@@ -2,102 +2,126 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+    <>
+      {/* Header fijo sin cambios */}
+      <header className="bg-black/25 text-white px-6 py-4 fixed top-0 w-full z-50 backdrop-blur-lg border-b border-white/5 shadow-md">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <h1 className="text-xl font-bold">GymTrack</h1>
+          <nav className="space-x-6 hidden md:block">
+            <a href="#beneficios" className="hover:text-green-400 transition">Beneficios</a>
+            <a href="#funciona" className="hover:text-green-400 transition">Cómo funciona</a>
+            <a href="#contacto" className="hover:text-green-400 transition">Contacto</a>
+          </nav>
+          <a href="#registro" className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition text-sm">
+            Unirme
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </header>
+
+      {/* Contenido principal con fondo #151518 */}
+       <main className="pt-24 bg-[#151518] min-h-screen flex flex-col items-center text-white">
+      {/* Hero principal */}
+      <section className="w-full max-w-6xl min-h-[800px] flex flex-col md:flex-row items-center justify-between px-6 text-center md:text-left border-b border-white/10 gap-8">
+        <div className="flex-1">
+          <h2 className="text-4xl font-bold mb-4">Monitorea tu progreso en el gimnasio</h2>
+          <p className="text-lg mb-6 max-w-xl">
+            Lleva tus rutinas, notas y progreso en una app simple y poderosa.
+          </p>
+          <a
+            href="#registro"
+            className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition"
+          >
+            Empieza ahora
+          </a>
+        </div>
+    
+      </section>
+
+      {/* Beneficios */}
+      <section id="beneficios" className="py-20 bg-[#151518] max-w-6xl w-full mx-auto px-6  border-b border-white/10 gap-8">
+        <h3 className="text-3xl font-bold mb-12 text-center">Beneficios</h3>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="p-6 bg-black/20 backdrop-blur-md rounded-xl border  border-white/10 shadow text-center ">
+              <Image
+              src="/progress_img_example.svg" // imagen en public/
+              alt="Descripción de la imagen"
+              width={120}
+              height={50}
+              className="mx-auto mb-10"
+            />
+            <h4 className="text-xl font-semibold mb-2 bg-gradient-to-r from-[#2a8f3e] via-[#43d660] to-[#6dff8a] text-transparent bg-clip-text drop-shadow-[0_0_5px_rgba(67,214,96,0.4)]">
+              Seguimiento de Progreso
+            </h4>
+            <p>Registra tus entrenamientos, pesos, repeticiones y mejora semana a semana.</p>
+          </div>
+          <div className="p-6 bg-black/20 backdrop-blur-md rounded-xl border border-white/10 shadow text-center">
+            <Image
+              src="/note_img_example.svg" // imagen en public/
+              alt="Descripción de la imagen"
+              width={120}
+              height={50}
+              className="mx-auto mb-10"
+            />
+            <h4 className="text-xl font-semibold mb-2 bg-gradient-to-r from-[#2a8f3e] via-[#43d660] to-[#6dff8a] text-transparent bg-clip-text drop-shadow-[0_0_5px_rgba(67,214,96,0.4)]">Observaciones</h4>
+            <p>Agrega observaciones sobre tu estado físico o tus rutinas.</p>
+          </div>
+          <div className="p-6 bg-black/20 backdrop-blur-md rounded-xl border border-white/10 shadow text-center">
+               <Image
+              src="/objective_img_example.svg" // imagen en public/
+              alt="Descripción de la imagen"
+              width={120}
+              height={50}
+              className="mx-auto mb-10"
+            />
+            <h4 className="text-xl font-semibold mb-2 bg-gradient-to-r from-[#2a8f3e] via-[#43d660] to-[#6dff8a] text-transparent bg-clip-text drop-shadow-[0_0_5px_rgba(67,214,96,0.4)]">Objetivos Claros</h4>
+            <p>Define metas y ve tu evolución de manera visual.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Cómo funciona */}
+      <section id="funciona" className="py-20 bg-[#151518] max-w-6xl w-full mx-auto px-6  border-b border-white/10 gap-8">
+        <h3 className="text-3xl font-bold mb-12 text-center">¿Cómo funciona?</h3>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h4 className="text-2xl font-semibold mb-4">1. Regístrate y crea tu perfil</h4>
+            <p className="text-lg">Configura tus objetivos, preferencias y comienza en segundos.</p>
+          </div>
+          <img
+            src="/images/step-register.png"
+            alt="Registro"
+            className="w-full max-w-sm mx-auto rounded-xl shadow"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center mt-16">
+          <img
+            src="/images/step-track.png"
+            alt="Seguimiento"
+            className="w-full max-w-sm mx-auto rounded-xl shadow"
           />
-          Examples
-        </a>
+          <div>
+            <h4 className="text-2xl font-semibold mb-4">2. Registra y visualiza tu progreso</h4>
+            <p className="text-lg">Accede a estadísticas claras y gráficas sobre tu desempeño físico.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Registro */}
+      <section id="registro" className="py-20 bg-[#151518] max-w-6xl w-full mx-auto px-6 text-center">
+        <h3 className="text-3xl font-bold mb-6">¿Listo para comenzar?</h3>
+        <p className="text-lg mb-6">Regístrate gratis y lleva tu progreso al siguiente nivel.</p>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#"
+          className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+          Crear cuenta
         </a>
+      </section>
+    </main>
+      {/* Footer */}
+      <footer className="bg-[#151518] text-white text-center py-6">
+        <p>© 2025 GymTrack. Todos los derechos reservados.</p>
       </footer>
-    </div>
+    </>
   );
 }

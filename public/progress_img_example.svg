@@ -1,0 +1,25 @@
+<svg width="800px" height="800px" viewBox="0 0 64 64" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a8f3e" />
+      <stop offset="50%" stop-color="#43d660" />
+      <stop offset="100%" stop-color="#6dff8a" />
+    </linearGradient>
+    <filter id="neonGlow">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feFlood flood-color="#43d660" flood-opacity="0.5" result="glowColor" />
+      <feComposite in="glowColor" in2="blur" operator="in" result="softGlow" />
+      <feMerge>
+        <feMergeNode in="softGlow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g id="SVGRepo_iconCarrier" filter="url(#neonGlow)"> 
+    <g>
+      <path fill="url(#neonGradient)" d="M59.3,58.9v-40h-1h-11v40h-1.9v-30h-1h-11v30h-1.9v-34h-1h-11v34h-1.9v-26h-1h-11v26H4v2h1.6h12h1.9h12h1.9h12h1.9h12H60 v-2H59.3z M7.6,58.9v-24h8v24H7.6z M21.5,26.9h8v32l-8,0V26.9z M35.4,58.9v-28h8v28H35.4z M49.3,20.9h8v38l-8,0V20.9z"/>
+      <polygon fill="url(#neonGradient)" points="26.2,12.5 36.7,22.8 54.9,4.6 53.5,3.1 36.7,19.9 26.1,9.6 8.5,27.5 10,28.9 "/>
+    </g>
+  </g>
+</svg>
