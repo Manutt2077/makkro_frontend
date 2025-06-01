@@ -3,21 +3,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      {/* Header fijo sin cambios */}
-      <header className="bg-black/25 text-white px-6 py-4 fixed top-0 w-full z-50 backdrop-blur-lg border-b border-white/5 shadow-md">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <h1 className="text-xl font-bold">GymTrack</h1>
-          <nav className="space-x-6 hidden md:block">
-            <a href="#beneficios" className="hover:text-green-400 transition">Beneficios</a>
-            <a href="#funciona" className="hover:text-green-400 transition">Cómo funciona</a>
-            <a href="#contacto" className="hover:text-green-400 transition">Contacto</a>
-          </nav>
-          <a href="#registro" className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium transition text-sm">
-            Unirme
-          </a>
-        </div>
-      </header>
-
       {/* Contenido principal con fondo #151518 */}
        <main className="pt-24 bg-[#151518] min-h-screen flex flex-col items-center text-white">
       {/* Hero principal */}
@@ -118,10 +103,6 @@ export default function Home() {
         </a>
       </section>
     </main>
-      {/* Footer */}
-      <footer className="bg-[#151518] text-white text-center py-6">
-        <p>© 2025 GymTrack. Todos los derechos reservados.</p>
-      </footer>
     </>
   );
 }
