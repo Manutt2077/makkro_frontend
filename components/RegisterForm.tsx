@@ -163,9 +163,7 @@ const handleRegister = async (e: React.FormEvent) => {
           >
             {loading ? "Procesando..." : "Registrarse"}
           </button>
-          <p className="text-center text-[#CBD5E1]">
-            ¿Ya tienes una cuenta? 
-            <a href="http://localhost:3000/login" className="text-teal-500 font-bold hover:cursor-pointer">Inicia Sesión</a></p>
+          <p className="text-center text-[#CBD5E1]">¿Ya tienes una cuenta? <a href="http://localhost:3000/login" className="text-teal-500 font-bold hover:cursor-pointer"> Inicia Sesión</a></p>
         </form>
       </div>
     </section>
